@@ -26,7 +26,6 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log('1111111111')
   NProgress.start()
   next()
 })

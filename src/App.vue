@@ -1,7 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" ref="app">
     <div class="input">
       <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      <el-button type="primary" size="mini" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
     </div>
     <el-button type="primary" size="mini" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
     <svg-icon icon-class="user"/>
@@ -19,6 +20,10 @@ export default {
     btnClick: function () {
       this.$alert('提示')
     }
+  },
+  mounted () {
+    const height = window.getComputedStyle(this.$refs.app).height
+    console.log(height)
   }
 }
 </script>
@@ -30,10 +35,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /deep/ .el-button--primary {
-    width: 1.5rem;
-    height: 0.5rem;
-    background-color: red;
+  .input {
+    /deep/ .el-button--primary {
+      width: 1.5rem;
+      height: 0.5rem;
+      background-color: red;
+  }
   }
 }
 
