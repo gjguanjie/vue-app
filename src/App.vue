@@ -1,10 +1,30 @@
 <template>
   <div id="app" ref="app">
-    <div class="input">
-      <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
-      <el-button type="primary" size="mini" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
+    <div class="input-group">
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
+      <div class="input">
+        <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
+      </div>
     </div>
-    <el-button type="primary" size="mini" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
+    <el-button type="primary" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
+    <el-button type="primary" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
     <svg-icon icon-class="user"/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -37,8 +57,8 @@ export default {
   color: #2c3e50;
   .input {
     /deep/ .el-button--primary {
-      width: 1.5rem;
-      height: 0.5rem;
+      /*width: 1.5rem;*/
+      /*height: 0.5rem;*/
       background-color: red;
   }
   }
@@ -59,8 +79,11 @@ export default {
 #nprogress .bar {
   background: blue !important; //自定义颜色
 }
+.input-group {
+  display: flex;
+  flex-direction: row;
+}
 .input {
-  width: 10rem;
-  height: 1rem;
+  width: 4rem;
 }
 </style>
