@@ -4,7 +4,7 @@
       <el-input type="text" auto-complete="off" placeholder="请输入账号" prefix-icon="user"></el-input>
     </div>
     <el-button type="primary" size="mini" @click="btnClick" prefix-icon="user">{{$t('confirm')}}</el-button>
-    <span>111<svg-icon icon-class="user"/>0000</span>
+    <svg-icon icon-class="user"/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>

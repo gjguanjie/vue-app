@@ -7,6 +7,7 @@ import './plugins/element.js'
 import 'lib-flexible'
 import 'nprogress/nprogress.css'
 import i18n from '@/i18n/i18n'
+import './icons'
 
 Vue.config.productionTip = false
 
